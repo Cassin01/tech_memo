@@ -13,3 +13,15 @@ vimscript
 [意外と知られていないvimのtips(vimでオブジェクト継承)](https://mattn.kaoriya.net/software/vim/20070817164837.htm) REVIEW
 
 
+## 注意点
+filterの返り値はcopyじゃない. 参照されている.
+
+そのため
+
+```vim
+let t = copy(filter(...))
+```
+
+と書く
+
+
