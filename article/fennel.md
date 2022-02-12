@@ -1,6 +1,6 @@
 # neovimの設定をlispで書く
 
-(meta:tag neovim lua fennel)
+@(meta:tag neovim lua fennel)
 
 vim9? lua? python3? rust? deno?😵‍💫どれ使えばいいの?
 
