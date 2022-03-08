@@ -1,0 +1,44 @@
+ #+title: Note For Key map
+
+** I need to learn first
+
+- Cancell command:  ~<C-g>~
+
+** 日本語
+
+[[https://cns-guide.sfc.keio.ac.jp/2001/7/1/5.html][たまごについて]]
+
+*** ``ん`` の入力方法
+
+- ~n'~ or ~N~
+
+*** 入力
+
+- モード切り替え ~<C-\>~
+- 変換 ~<space>~
+- ひらがな ~H~
+- カタカナ ~K~
+- 文節を縮める ~<C-i>~
+- 分節を広げる ~<C-o>~
+- 次の変換文節 ~<C-f>~
+- 前の変換文節 ~<C-b>~
+
+
+*** 移動
+
+jaword.el により提供される。
+spacemacsにはデフォルトで入っているみたい
+
+- ~M-f~ 次の単語へ移動
+- ~M-b~ 前の単語へ移動
+- ~M-d~ 単語の削除
+- ~M-t~ 単語の入れ替え
+- ~M-<DEL>~ 前の単語の削除
+
+** UI
+
+- Toggle Transparent ~<space>TT~
+
+** emacs
+*** 実行
+    ~<C-x><C-e>~
