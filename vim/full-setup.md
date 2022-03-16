@@ -1,4 +1,4 @@
-star 3/15
+Number of star: 3/15
 
 ## vim
 
@@ -41,17 +41,13 @@ star 3/15
 ## plugin
 
 ```lua
-use "moll/vim-bbye"
-use "nvim-lualine/lualine.nvim"
-use "akinsho/toggleterm.nvim"
-use "ahmedkhalf/project.nvim"
-use "lewis6991/impatient.nvim"
-use "lukas-reineke/indent-blankline.nvim"
-use "goolord/alpha-nvim"
+use "moll/vim-bbye" --  Delete buffers (close files) without closing your windows or messing up your layout.
+use "ahmedkhalf/project.nvim" -- プロジェクト単位でvimを操作
+use "lewis6991/impatient.nvim" -- Speed up loading Lua modules in Neovim to improve startup time
 use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
 
 
-use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
+use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
 use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
 use "numToStr/Comment.nvim" -- Easily comment stuff
@@ -66,7 +62,7 @@ use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 use "JoosepAlviste/nvim-ts-context-commentstring"
 
  -- Git
-use "lewis6991/gitsigns.nvim"
+use "lewis6991/gitsigns.nvim" -- Show git status on left of a code.
 
 -- cmp plugins
 use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -84,24 +80,28 @@ Bundle 'rhysd/conflict-marker.vim'
 
 " text writing
 Bundle 'reedes/vim-litecorrect'
-" auto correction
+
+" auto correction for english writing
 Bundle 'reedes/vim-textobj-sentence'
-Bundle 'reedes/vim-textobj-quote'
-Bundle 'reedes/vim-wordy'
+Bundle 'reedes/vim-textobj-quote' " streat quote -> curry quote
+Bundle 'reedes/vim-wordy' " 誤用, 悪用, 過剰使用の履歴がある単語やフレーズを特定. リモートサーバにアクセスしない. 軽量.
+
 
 " Web
 Bundle 'mattn/webapi-vim'
 ```
 
+**programming**
+
+[echodoc.vim](https://github.com/Shougo/echodoc.vim)
+
 [vim-wordchipper](https://github.com/preservim/vim-wordchipperv)
 
-```txt
-<BS> or <C-h>	Delete the character before the cursor
-<Del>	Delete the character under the cursor
-<C-w>	Delete the word before the cursor
-<C-u>	Delete all characters before the cursor in the current line
+``<BS>`` or ``<C-h>``: Delete the character before the cursor
+``<Del>``: Delete the character under the cursor
+``<C-w>``: Delete the word before the cursor
+``<C-u>``: Delete all characters before the cursor in the current line
 In addition, with Ctrl-o you can execute a command, which will then return to Insert mode. For example <C-o>dw can delete the word after the cursor.
-```
 
 [undotree](https://github.com/mbbill/undotree)
 
@@ -109,9 +109,13 @@ In addition, with Ctrl-o you can execute a command, which will then return to In
 " structlog makes logging in Lua less painful and more powerful by adding structure to your log entries.
 ```
 
-#### neovim
+### neovim plugin
+
+logの構造化
 
 [structlog](https://github.com/Tastyep/structlog.nvim)
+
+#### snippet
 
 [LuaSnip](https://github.com/L3MON4D3/LuaSnip/)
 
@@ -122,3 +126,18 @@ In addition, with Ctrl-o you can execute a command, which will then return to In
 #### Terminal
 
 [toggleterm](https://github.com/akinsho/toggleterm.nvim)
+
+#### line theme
+
+``nvim-lualine/lualine.nvim``
+
+#### indent line
+
+``lukas-reineke/indent-blankline.nvim``
+
+#### dashboard
+
+``goolord/alpha-nvim``
+
+
+#### see also
