@@ -21,9 +21,11 @@ So I think Rust can't gen handler with lambda function.
 ** How to startup wasm
 
 In your project:
+
 ~$ rustup target install wasm32-unknown-unknown~
 
 *wasm-server-runner*
+
 ~cargo install wasm-server-runner~
 
 On ~.cargo/contig.toml~ (in your project folder, or globally in your user home folder):
