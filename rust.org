@@ -1,0 +1,39 @@
+#+title: Rust
+
+* Twitch 4/19
+
+** NOTE
+
+*** impl Trait
+
+syntax suger for Box<dyn ...>
+
+** What I learned.
+
+Async closure are unstable.
+
+- issue #62290 <https://github.com/rust-lang/rust/issues/62290> for more information to use an async block :NOTE:
+
+So I think Rust can't gen handler with lambda function.
+
+* bevy
+
+** wasm
+
+In your project:
+~$ rustup target install wasm32-unknown-unknown~
+
+*wasm-server-runner*
+~cargo install wasm-server-runner~
+
+On ~.cargo/contig.toml~ (in your project folder, or globally in your user home folder):
+
+WARN: Not ~Cargo.toml~ !!
+
+#+begin_src toml
+[target.wasm32-unknown-unknown]
+runner = "wasm-server-runner"
+#+end_src
+
+Run game with:
+~cargo run --target wasm32-unknown-unknown~
