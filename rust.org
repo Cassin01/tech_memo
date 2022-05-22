@@ -18,7 +18,7 @@ So I think Rust can't gen handler with lambda function.
 
 * bevy
 
-** wasm
+** How to startup wasm
 
 In your project:
 ~$ rustup target install wasm32-unknown-unknown~
