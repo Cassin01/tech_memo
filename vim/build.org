@@ -2,7 +2,7 @@
 
 #+TAGS: vim chown
 
-** E886: System error while opening ShaDa file /Users/foo/.local/share/nvim/shada/main.shada for reading: permission denied
+** E886: System error while opening ShaDa file ~/Users/foo/.local/share/nvim/shada/main.shada~ for reading: permission denied
 
 After I built nvim, this warning occur.
 
@@ -12,7 +12,7 @@ The reason for this warning may be I was built with sudo.
 $ sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
 #+end_src
 
-I found that folder ~nvim~'s owner was root.
+I found the folder ~nvim~ 's owner was root.
 
 #+begin_src sh
 $ pwd

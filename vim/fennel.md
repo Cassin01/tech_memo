@@ -1,4 +1,4 @@
-# neovimの設定をlispで書く
+# neovimの設定をfennelで書く
 
 vim9? lua? python3? rust? deno?😵‍💫どれ使えばいいの?
 
@@ -39,121 +39,77 @@ lua/%.lua: fnl/%.fnl
 
 ```
 
-## プラグイン
+### Reference
 
-### syntax
+[reference](https://fennel-lang.org/reference)
+
+### plugins
+
+#### syntax
+
 - [fennel.vim](https://github.com/bakpakin/fennel.vim')
 
-### native fennel suppor
+#### native fennel support
 
 - [fennel-nvim](https://github.com/jaawerth/fennel-nvim')
 
-## マクロ
-
-neovim インテグレータ
+#### transpile and path setting
 
 - [hotpot](https://github.com/rktjmp/hotpot.nvim)
 
 - [aniseed](https://github.com/Olical/aniseed)
 
+- [init.lua](https://git.sr.ht/~hauleth/dotfiles/tree/master/item/vim/.config/nvim/init.lua)
+
+#### macro libralis
+
 - [zest](https://github.com/tsbohc/zest.nvim)
+- [fulib.nvim](https://github.com/6cdh/fulib.nvim)
 
-## config例
+### dotfiles
 
-- [datwaft](https://github.com/datwaft/nvim.conf/blob/main/fnl/conf/settings.fnl) (金魚アイコン)
-
-- [tsbohc](https://github.com/tsbohc/.garden/tree/master/etc/nvim_old/config/fnl/core) (zest使っている. 女の子の絵のアイコン)
-
-- [alexaandru](https://github.com/alexaandru/nvim-config/tree/master/fnl) (白黒の顔写真のアイコン)
-
-## dotfiles
+#### using aniseed
+- [alexaandru](https://github.com/alexaandru/nvim-config/tree/master/fnl)
+    - white and brack icon
 
 - [camspiers/dotfiles](https://github.com/camspiers/dotfiles/blob/master/files/.config/nvim/fnl/options.fnl)
-    - アイコンがイケメンな人
     - using aniseed, neat
 
 - [nyoom.nvim](https://www.libhunt.com/topic/neovim-dotfiles)
-    - 完全なプレリュード
+    - full fennel
 
-- [猫の顔面のアイコンの人](https://notabug.org/dm9pZCAq/dotfiles/src/master/.config/nvim)
+- [cat face icon](https://notabug.org/dm9pZCAq/dotfiles/src/master/.config/nvim)
     - all writen in fennel and all file will be compiled.
-    - に全部fennelで自分書いているところが個人的に統一感があって好き
 
-### hotpot
+- [datwaft](https://github.com/datwaft/nvim.conf/blob/main/fnl/conf/settings.fnl)
+    - producer of hotpot
 
- - [女の子の絵アイコンの人](https://github.com/6cdh/dotfiles/tree/main/editor/nvim)
-     - fulib.nvimの作者
+- [tsbohc](https://github.com/tsbohc/.garden/tree/master/etc/nvim_old/config/fnl/core)
+    - using zest
 
-## function library
-- [fulib.nvim](https://github.com/6cdh/fulib.nvim)
+#### using hotpot
 
+ - [girl icon](https://github.com/6cdh/dotfiles/tree/main/editor/nvim)
+     - producer of fulib.nvim
 
-## 書き方
+## plugin for s-expressions
 
-[reference](https://fennel-lang.org/reference)
+- [paredit](https://github.com/vim-scripts/paredit.vim)
+    - ⭐ 168 (Im not using)
 
-### neovim config 例
-
-- [datwaft](https://github.com/datwaft/nvim.conf)
-
-### 例: selfとテーブル
-
-lua
-
-```lua
-Keys = {}
-
-function Keys:get_i() return self.n end
-
-function Keys:set_i(key, description)
-   self.i[key] = description
-end
-
-function Keys.new()
-   local obj = {
-      i = {},
-   }
-   return setmetatable(obj, {__index = Keys})
-end
-```
-
-fennel
-
-```lisp
-(local map_register {
-  :i {}
-  :get_i (fn [self] self.i)
-  :set_i (fn [self key command description]
-          (tset self.i key [command description]))
-
-(map_register:set_i "jj" "<esc>" "end insert mode")
-(print (vim.inspect (map_register:get_i)))
-```
-
-生成されたlua
-
-```lua
-local map_register
-local function _1_(self)
-  return self.i
-end
-local function _2_(self, key, command, description)
-  self.i[key] = {command, description}
-  return nil
-end
-map_register = {i = {}, get_i = _1_, set_i = _2_}
-map_register:set_i("jj", "<esc>", "end insert mode")
-return print(vim.inspect(map_register:get_i()))
-```
-
-## macro
-
-import
+- [vim-sexp](https://github.com/guns/vim-sexp)
+    - ⭐ 541
 
 ```
-(import-macros mymacros (.. ... ".macros"))
+(a (b ...)) -> (a) (b ...)
+(a) (b) -> (a b)
+(a (b)) -> (b)
 ```
 
-macroが登録されていない場合がある
+- [vim-sexp-mappings-for-regular-people](https://github.com/tpope/vim-sexp-mappings-for-regular-people)
+    - ⭐ 368
 
+- [parinfer](https://github.com/bhurlow/vim-parinfer)
+    - ⭐ 161 (Im not using)
+    - auto right-bracket complication and indentation
 
