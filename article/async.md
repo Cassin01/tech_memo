@@ -1,8 +1,58 @@
+# コマンドを非同期実行してみる
+
+:vim:
+
+## `luv`
+
+`libuv`は`node.js`の非同期の部分で使われているらしいです.
+
+`luv`は`luajit`の`libuv`バインディングです．
+
+メソッドは`vim.loop`にあります．
+
+詳しくは`:h vim.loop`
+
+
+## コマンドを非同期実行する
+```core/cmd.fnl
+(fn u-cmd [name f ?opt]
+       (let [opt (or ?opt {})]
+         (tset opt :force true)
+         (vim.api.nvim_create_user_command name f opt)))
+
+;;; WARN: requires Cassin01/fetch-info
+(u-cmd
+  :MGInfo
+  (λ [opts]
+    (local {: async-cmd} (require :util.cmd))
+    (async-cmd (.. "echom nvim_exec(\'GInfo" opts.args "\', v:true)")))
+  {:nargs 1
+   :complete (λ [ArgLead CmdLine CursorPos]
+               [:F :C :J :W])})
+```
+
+```util/cmd.fnl
+(local uv vim.loop)
+(fn async-cmd [cmd]
+  (local timer (uv.new_timer))
+  (timer:start 1000 0
+               (vim.schedule_wrap
+                 (λ []
+                   ; (print :Awake!)
+                   (vim.cmd cmd)
+                   (timer:close))))
+```
+
+
+
 ## 供養
+
+今までは[aktsk.jp](https://hackerslab.aktsk.jp/2020/12/receive-on-vim)の記事をコピーして使っていました．
 
 ### 使い方
 - nvimを2つ起動する.
 - はじめに立ち上げたものをサーバー用に使用する(colorschemeがkanagawaになる)
+
 
 ```server.vim
 " Ref: https://hackerslab.aktsk.jp/2020/12/receive-on-vim
