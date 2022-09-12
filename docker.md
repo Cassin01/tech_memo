@@ -5,6 +5,12 @@
 $ docker images
 ```
 
+## イメージの削除
+
+```sh
+$ docker rmi [IMAGE ID]
+```
+
 ## コンテナの稼働状況の確認
 ```zsh
 $ docker ps -a
@@ -32,4 +38,3 @@ $ docker stop -t 2 0608ca603fa4
 ```zsh
 docker restart -t 2 0608ca603fa4
 ```
-
