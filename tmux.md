@@ -13,6 +13,12 @@
 tmux ls
 ```
 
+## Discard all sessions
+
+```sh
+tmux kill-server
+```
+
 
 # キーバインド
 ## セッション(tab)

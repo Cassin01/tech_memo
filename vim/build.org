@@ -2,7 +2,19 @@
 
 #+TAGS: vim chown
 
-** E886: System error while opening ShaDa file ~/Users/foo/.local/share/nvim/shada/main.shada~ for reading: permission denied
+* How to build neovim
+
+```build-nvim.sh
+#!/bin/sh -eu
+cd /usr/local/src
+brew reinstall ninja libtool automake cmake pkg-config gettext curl
+sudo git clone https://github.com/neovim/neovim
+cd neovim
+sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+sudo make install
+```
+
+* E886: System error while opening ShaDa file ~/Users/foo/.local/share/nvim/shada/main.shada~ for reading: permission denied
 
 After I built nvim, this warning occur.
 

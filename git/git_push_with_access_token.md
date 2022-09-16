@@ -1,6 +1,9 @@
+# get a access token
+**in GitHub**
+
+Settings -> Developer settings
+
 # Git push with access token
-
-
 
 ```zsh
 git push https://<GITHUB_ACCESS_TOKEN>@github.com/<GITHUB_USERNAME>/<REPOSITORY_NAME>.git
