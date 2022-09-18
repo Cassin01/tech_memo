@@ -48,38 +48,48 @@ $ mysql -u root -p -h 127.0.0.1
 
 # この後パスワードを入力して完了
 ```
-## mysql
+# mysql
 
-### データベースの一覧
+## データベースの一覧
 
 ```mysql
 show databases;
 ```
 
-### データベースの作成
+## データベースの作成
 
 ```mysql
-create database [データベース名 (my_info)];
+create database [データベース名];
 ```
 
-### データベースの選択
+## データベースの選択
 
 ```mysql
-use [データベース名 (my_info)];
+use [データベース名];
 ```
 
-### テーブルの一覧
+## テーブルの一覧
 
 ```mysql
 show tables;
 ```
 
-### テーブルの作成
+## テーブルの作成
 
 ```mysql
-create table [テーブル名 (passwords)];
+create table [テーブル名] (id INT AUTO_INCREMENT, name TEXT,mail TEXT ,pass TEXT, PRIMARY KEY (id));
 ```
 
-### テーブルへの基本操作
+## テーブルのcolumn一覧
+
+```mysql
+describe [テーブル名]
+```
+
+## テーブルへの基本操作
 
 `select` `delete` `inisert`
+
+# データベースへのアクセス: TODO
+
+[How to insert data into a MySQL database with Golang?](https://www.practical-go-lessons.com/post/how-to-insert-data-into-a-mysql-database-with-golang-ccbmu7s6qcuc70nnaia0)

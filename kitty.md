@@ -47,3 +47,9 @@ On kitty.conf:
 ```
 map ctrl+i send_text normal,application \x1b[73;5u
 ```
+
+## How to determine which font Kitty is using
+
+```shell
+kitty --debug-font-fallback
+```
