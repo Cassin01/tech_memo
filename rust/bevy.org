@@ -1,0 +1,35 @@
+#+title: Rust
+
+* bevy
+
+** How to startup wasm
+
+In your project:
+
+~$ rustup target install wasm32-unknown-unknown~
+
+*wasm-server-runner*
+
+~cargo install wasm-server-runner~
+
+On ~.cargo/contig.toml~ (in your project folder, or globally in your user home folder):
+
+WARN: Not ~Cargo.toml~ !!
+
+#+begin_src toml
+[target.wasm32-unknown-unknown]
+runner = "wasm-server-runner"
+#+end_src
+
+Run game with:
+~cargo run --target wasm32-unknown-unknown~
+
+** cargo-watch
+
+Install:
+
+~cargo install cargo-watch~
+
+With it, you can detect changes in the project directory, and automatically rebuild and relaunch the server:
+
+~cargo watch -cx "run --release --target wasm32-unknown-unknown"~
