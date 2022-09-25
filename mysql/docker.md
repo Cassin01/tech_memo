@@ -88,8 +88,36 @@ describe [テーブル名]
 
 ## テーブルへの基本操作
 
-`select` `delete` `inisert`
+`select` `delete` `inisert` 
 
-# データベースへのアクセス: TODO
+# データベースへのアクセス
 
 [How to insert data into a MySQL database with Golang?](https://www.practical-go-lessons.com/post/how-to-insert-data-into-a-mysql-database-with-golang-ccbmu7s6qcuc70nnaia0)
+## Rust sqlx
+
+```rust
+use sqlx::mysql::MySqlPoolOptions;
+
+
+#[async_std::main]
+async fn main() -> Result<(), sqlx::Error> {
+    let pool = MySqlPoolOptions::new()
+        .max_connections(5)
+        .connect("mysql://root:mysql@127.0.0.1/my_info").await?;
+
+    let row: (i64, ) = sqlx::query_as("SELECT id from passwords")
+        .bind(150_i64)
+        .fetch_one(&pool).await?;
+    println!("{:?}",row.0);
+    // assert_eq!(raw.0, 150);
+    Ok(())
+}
+```
+```sh
+❯ sudo cargo run
+Error: Database(MySqlDatabaseError { code: Some("28000"), number: 1045, message: "
+ password: YES)" })
+
+```
+
+[MySQL ERROR 1045 (28000): Access denied for user 'bill'@'localhost' (using password: YES)](https://stackoverflow.com/questions/10299148/mysql-error-1045-28000-access-denied-for-user-billlocalhost-using-passw)
