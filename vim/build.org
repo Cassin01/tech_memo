@@ -11,6 +11,7 @@ brew reinstall ninja libtool automake cmake pkg-config gettext curl
 sudo git clone https://github.com/neovim/neovim
 cd neovim
 sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+git checkout stable # If you want the stable release
 sudo make install
 ```
 

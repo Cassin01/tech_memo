@@ -1,3 +1,9 @@
+```yaml
+title: gitについて
+date: 2022-10-14
+categories: [programming]
+tags: [git]
+```
 # upstream
 
 ## ossにpull request
@@ -43,3 +49,26 @@ git push --set-upstream origin [Branch name]
 git push origin [Branch name]
 ```
 
+
+# [Conventional Commits](https://www.conventionalcommits.org/)
+
+# trics
+
+## Add and commit at same time
+
+```sh
+git commit -am "chore: add new feature"
+```
+
+## Add alias
+
+```sh
+git config --global alias.ac "commit -am"
+git ac "noice"
+```
+
+## git log more readable
+
+```sh
+git log --graph --oneline --decorete
+```
