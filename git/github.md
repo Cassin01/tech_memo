@@ -5,7 +5,7 @@ git push https://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@github.com/Cassin01/la
 ### エディタの設定
 `gh config set editor`
 
-## repo - リポジトリの操作
+### repo - リポジトリの操作
 - [gh repo](https://cli.github.com/manual/gh_repo)
 
 ### リポジトリ作成
@@ -14,7 +14,7 @@ git push https://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@github.com/Cassin01/la
 ### リポジトリ削除
 `gh repo delete`
 
-# GitHub REST API 
+# GitHub REST API
 
 ### リポジトリ一覧を取得
 
@@ -54,3 +54,7 @@ query {
     }
 }'
 ```
+
+## スターしてくれたユーザを得る
+
+[stargazeers](http://developer.github.com/v3/activity/starring/#list-stargazers)

@@ -121,3 +121,24 @@ Error: Database(MySqlDatabaseError { code: Some("28000"), number: 1045, message:
 ```
 
 [MySQL ERROR 1045 (28000): Access denied for user 'bill'@'localhost' (using password: YES)](https://stackoverflow.com/questions/10299148/mysql-error-1045-28000-access-denied-for-user-billlocalhost-using-passw)
+# ユーザの管理
+
+## ユーザの作成
+
+host`%`は外部から接続できる。
+
+```mysql
+ grant all privileges on your_schema.* to 'hie'@'%' identified by 'password' with grant option;
+```
+
+## ユーザの削除
+```mysql
+drop user 'user'@'localhost';
+```
+
+# localhostとは
+
+[Code for Dajango](https://codor.co.jp/django/localhost)
+
+localhostとは自分のパソコンのこと
+

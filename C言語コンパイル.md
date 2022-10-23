@@ -27,4 +27,3 @@ $ gcc a.c b.o c.o -o main
 
 ## -Wall, -W
 ワーニング有効
-
