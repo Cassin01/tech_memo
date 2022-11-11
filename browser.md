@@ -1,5 +1,5 @@
 ```yaml
-title: Browser
+title: 謎ブラウザ
 date: 2022-10-24
 categories: [app]
 tags: [browser, app, linux]
@@ -65,4 +65,4 @@ tags: [browser, app, linux]
 - 設定がちょうどよいくらいシンプルですぐに使える.
 - 普通にはやい
 - ダークモードが反映されなかった
- 
+- ダウンロード画面が謎言語
