@@ -6,7 +6,7 @@ categories: [security]
 tags: [CTF, security]
 ```
 
-# links
+# Links
 
 - [CTF](https://github.com/omerAF/CTFs/tree/master/asisctf_finals_2021/jsss)
 No link
@@ -15,6 +15,11 @@ No link
 
 I think his blog is beautiful.
 
-# Line
-- [line](https://ctf.cpaw.site/index.php)
+# CTF sites
 
+- [cpaw](https://ctf.cpaw.site/index.php)
+
+# Tools
+
+- gcc-multilib, g++-multilib: execute a 32bit exe-file
+- strings: (@binutils (extract strings from a binary file))
