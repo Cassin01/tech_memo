@@ -19,3 +19,5 @@ But: All `<80><fc>^D`
 # keybind
 
 * `Ctrl-r`: show completion
+* `shift-ctrl-alt+"` split horizontally
+* `shift-ctrl-alt+%` split vertical
