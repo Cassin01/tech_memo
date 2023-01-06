@@ -94,3 +94,14 @@ getwininfo([{winid}])					*getwininfo()*
 		Can also be used as a |method|: >
 			GetWinnr()->getwininfo()
 ```
+
+## シェルからvimの出力を得る
+
+```sh
+$ vim -v -e -s -c "verbose smile" -c qa!
+ # :smile:が出力される
+```
+
+# neovimのテスト
+
+[Releases, docs & tests for plugins](https://www.reddit.com/r/neovim/comments/103d9on/releases_docs_tests_for_plugins/)
