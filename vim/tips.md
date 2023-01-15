@@ -104,4 +104,23 @@ $ vim -v -e -s -c "verbose smile" -c qa!
 
 # neovimのテスト
 
-[Releases, docs & tests for plugins](https://www.reddit.com/r/neovim/comments/103d9on/releases_docs_tests_for_plugins/)
+- [Releases, docs & tests for plugins](https://www.reddit.com/r/neovim/comments/103d9on/releases_docs_tests_for_plugins/)
+- [boiler plate](https://github.com/shortcuts/neovim-plugin-boilerplate)
+
+
+
+## vimのカーソルの設定
+
+- [vimからの制御シーケンスの使用例](https://ttssh2.osdn.jp/manual/4/ja/usage/tips/vim.html)
+- [Change your vim cursor from a black to line in normal and insert mode](https://youtu.be/FcQjTXLrVUU)
+
+Use a line cursor within insert mode and a block cursor everywhere else.
+
+Reference chart of values:
+- Ps = 0 -> blinking block.
+- Ps = 1 -> blinking block (default).
+- Ps = 2 -> steady block.
+- Ps = 3 -> blinking underline.
+- Ps = 4 -> steady underline.
+- Ps = 5 -> blinking bar (xterm)
+- Ps = 6 -> steady bar (xterm)
