@@ -254,3 +254,9 @@ local join = function (thunks)
     end
 end
 ```
+
+
+## Luarocks version 指定
+```
+luarocks --lua-dir=/usr/local/opt/lua@5.1 install say
+```
