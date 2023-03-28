@@ -72,3 +72,38 @@ git ac "noice"
 ```sh
 git log --graph --oneline --decorete
 ```
+
+## Add a description to a branch
+
+```
+git branch --edit-description
+```
+
+# Branch naming conventions
+
+[stack overflow](https://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-brancheshttps://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-branches)
+
+- 連番や長い名前を使わない
+
+## Group tokens
+
+```
+{lead token}/{short well-defined token}
+```
+
+## Short well-defined tokens
+
+```
+wip     Works in progress; stuff I know won't be finished soon
+feat    Feature I'm adding or expanding
+bug     Buf fix or experiment
+junk    Throwaway branbnch created to experiment
+```
+
+## Cycle token(lead token)
+
+```
+new     new
+testing testing
+ver     verified
+```

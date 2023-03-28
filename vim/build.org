@@ -19,7 +19,7 @@ sudo make install
 
 After I built nvim, this warning occur.
 
-The reason for this warning may be I was built with sudo.
+The reason for this warning may be caused by a reason that I was built with sudo.
 
 #+begin_src sh
 $ sudo make CMAKE_BUILD_TYPE=RelWithDebInfo

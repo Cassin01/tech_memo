@@ -21,3 +21,6 @@ But: All `<80><fc>^D`
 * `Ctrl-r`: show completion
 * `shift-ctrl-alt+"` split horizontally
 * `shift-ctrl-alt+%` split vertical
+
+# default shortcut
+https://wezfurlong.org/wezterm/config/default-keys.html

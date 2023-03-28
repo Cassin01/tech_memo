@@ -50,10 +50,22 @@ let g:markdown_fenced_languages = ['cofee', 'css', 'json=javascript', 'erb=eruby
 
 [itmcho](https://itmecho.com/blog/neovim-lua-hooks-with-user-events)
 
-## `:hi Ni(空白文字)(tab)`
+## ジョークコマンド
 
-ジョークコマンド
+- `:hi Ni(空白文字)(tab)`
+- `:help holy-grail`
+- `:smile`
+- `:help 42`
+- `:help spoon`
+- `:help bar`
+- `help!`
+- `:help howdoi` `only vim`
+- `:help showmatch` @`Note:`
+- `:help map-modes` @`map-modes`
 
+- ジョークプラグイン
+- [user getting board](https://github.com/mikesmithgh/ugbi)
+- [hotdog colorscheme](https://github.com/tckmn/hotdog.vim)
 
 ## Get window info
 ```txt
