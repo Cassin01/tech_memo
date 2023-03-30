@@ -106,5 +106,24 @@ $ git merge --no-ff release-1.2
 
 master &rarr; hotfix-* &rarr; develop and master
 
+```
+$ git checkout -b hotfix-1.2.1 master
 
+$ ./bump-version.sh 1.2.1
+
+$ git commit -a -m "Bumped version number to 1.2.1"
+```
+
+修正内容をコミットする.
+`git commit -m "Fixed severe production problem"`
+
+hotfixを終える.
+
+```
+$ git checkout master
+
+$ git merge --no-ff hotfix-1.2.1
+
+$ git tag -a 1.2.1
+```
 

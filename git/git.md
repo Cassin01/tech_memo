@@ -79,6 +79,12 @@ git log --graph --oneline --decorete
 git branch --edit-description
 ```
 
+## Git branch command behaves like 'less'
+
+```
+git --no-pager branch
+```
+
 # Branch naming conventions
 
 [stack overflow](https://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-brancheshttps://stackoverflow.com/questions/273695/what-are-some-examples-of-commonly-used-practices-for-naming-git-branches)
@@ -107,3 +113,39 @@ new     new
 testing testing
 ver     verified
 ```
+
+# Show network graph
+
+## git log
+
+今までのコミットのログが見れる
+
+```zsh
+git log
+```
+
+
+### --graph
+
+コミットツリーが表示される
+
+```
+git log --graph
+```
+
+- `--oneline`: 一行表示
+- `--decorate=(short|full|no)`: ブランチ名の表示形式
+- `--date=(relative|local|default|iso|rfc|shot|raw)`: 日付表示
+
+## alias
+
+@ `.gitconfig`
+
+```
+[alias]
+  tree = log --graph -decorate --pretty=oneline --abbrev-commit
+```
+
+`$ git tree`
+
+## tig
