@@ -1,0 +1,18 @@
+#+title: Typing
+
+* Keyboard layout
+
+** Monkeytype
+
+[[https://monkeytype.com/][link]]
+
+*** setting
+
+#+begin_src
+-> ctrl+shift+p
+    -> keybaord layout -> colmak dh
+    -> keyboard -> next
+    -> layout emulator -> colmak dh
+#+end_src
+
+

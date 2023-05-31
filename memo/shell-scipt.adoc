@@ -1,0 +1,16 @@
+== 現在のシェルを表示
+
+[, shell]
+----
+# shell script 自身のPIDを取得
+_PID=$$
+
+# shell script 自身の親PID(PPID)を出力
+_PPID=$(ps -o ppid -p $_PID | tail -n 1);
+
+if ps -p $_PPID | grep -qs bash ; then
+    echo "bash"
+elif ps -p $_PPID | grep -qs zsh ; then
+    echo "zsh"
+fi
+----

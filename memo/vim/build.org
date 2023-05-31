@@ -1,0 +1,43 @@
+#+title: build
+
+#+TAGS: vim chown
+
+* How to build neovim
+
+```build-nvim.sh
+#!/bin/sh -eu
+cd /usr/local/src
+brew reinstall ninja libtool automake cmake pkg-config gettext curl
+sudo git clone https://github.com/neovim/neovim
+cd neovim
+sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+git checkout stable # If you want the stable release
+sudo make install
+```
+
+* E886: System error while opening ShaDa file ~/Users/foo/.local/share/nvim/shada/main.shada~ for reading: permission denied
+
+After I built nvim, this warning occur.
+
+The reason for this warning may be caused by a reason that I was built with sudo.
+
+#+begin_src sh
+$ sudo make CMAKE_BUILD_TYPE=RelWithDebInfo
+#+end_src
+
+I found the folder ~nvim~ 's owner was root.
+
+#+begin_src sh
+$ pwd
+/Users/foo/.local/state
+$ ls -l
+drwx------  4 root staff  128  5 24 15:45 nvim
+#+end_src
+
+So I changed owner by the bellow command.
+
+#+begin_src sh
+$ sudo chown foo nvim
+#+end_src
+
+This worked well.
