@@ -1,3 +1,0 @@
-#+title: logo
-
-[[logo-maker][https://www.ucraft.com/free-logo-maker]]
