@@ -5,10 +5,6 @@ categories: [programming]
 tags: [VBA, LibreOffice]
 ```
 
-# Excel
-
-
-
 # LibreOffice
 
 ## Using VBA on LibreOffice
