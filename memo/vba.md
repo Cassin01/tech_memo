@@ -44,12 +44,12 @@ SF_Exception.console()
 
 ```vbnet
 GlobalScope.BasicLibraries.LoadLibrary("ScriptForge")
-	Dim FSO As Object
-	Set FSO = CreateScriptService("FileSystem")
-	FSO.FileNaming = "SYS"
-	Set f = FSO.OpenTextFile("~/tech-memo/memo/products/bench.md", FSO.ForWriting)
-	If Not IsNull(f) Then
-		f.WriteLine("hoge")
-		f.CloseFile()
-	End If
+Dim FSO As Object
+Set FSO = CreateScriptService("FileSystem")
+FSO.FileNaming = "SYS"
+Set f = FSO.OpenTextFile("~/tech-memo/memo/products/bench.md", FSO.ForWriting)
+If Not IsNull(f) Then
+    f.WriteLine("hoge")
+    f.CloseFile()
+End If
 ```
