@@ -31,6 +31,13 @@ $ git branch # 切替確認
 
 - If you want to make new local branch and move there at once: `git checkout -b [Branch name]`
 
+### ブランチ削除
+
+```sh
+$ git branch -d [Branch name]
+$ git branch -D [Branch name] # with force
+```
+
 ### コミット
 
 ```sh
