@@ -39,6 +39,11 @@ $ docker stop -t 2 0608ca603fa4
 docker restart -t 2 0608ca603fa4
 ```
 
+## コンテナの削除
+
+`docker rm CONTAINER`
+
+
 # Docker for Mac上のコンテナから、Mac上のアプリケーションに簡単に接続する
 [Docker for Mac上のコンテナから、Mac上のアプリケーションに簡単に接続する方法](https://qiita.com/Asayu123/items/ccfe4ccfc417ce57f445)
 

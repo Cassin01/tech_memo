@@ -51,7 +51,7 @@ $ git checkout -b myfeature develop
 ```
 $ git checkout develop
 Switched to branch 'develop'
-$ git merege --no-ff my feature
+$ git marege --no-ff my feature
 $ git branch -d myfeature
 $ git push origin develop
 ```
